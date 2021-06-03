@@ -1,0 +1,7 @@
+name: AfkSender
+version: ${project.version}
+main: com.github.mori01231.afksender.AfkSender
+api-version: 1.15
+authors: [ Mori01231 ]
+description: Sends players to afk server when afk.
+website: https://github.com/Mori01231
