@@ -18,10 +18,11 @@ public final class AfkSender extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        getLogger().info("AFKSENDER TEST");
+        getLogger().info("Enabling AfkSender...");
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         registerEvents();
+        getLogger().info("Enabled AfkSender");
     }
 
     @Override
