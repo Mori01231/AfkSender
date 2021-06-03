@@ -20,6 +20,8 @@ public final class AfkSender extends JavaPlugin {
         // Plugin startup logic
         getLogger().info("Enabling AfkSender...");
 
+        this.getCommand("afksender").setExecutor(new ReloadCommandExecutor(this));
+
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         this.saveDefaultConfig();

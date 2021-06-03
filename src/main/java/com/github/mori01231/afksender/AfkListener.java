@@ -24,10 +24,6 @@ public class AfkListener implements Listener {
         this.plugin = plugin;
     }
 
-    String afkServerName = AfkSender.getInstance().getConfig().getString("afk-server-name");
-    String playerMessage = ChatColor.translateAlternateColorCodes('&',AfkSender.getInstance().getConfig().getString("afk-server-send-message"));
-    String ignoreAfkMessage = ChatColor.translateAlternateColorCodes('&',AfkSender.getInstance().getConfig().getString("ignore-afk-message"));
-
     @EventHandler(priority = EventPriority.NORMAL)
     public void onPlayerAfk(AfkStatusChangeEvent event) {
         boolean hasGoneAfk = event.getValue();
@@ -35,6 +31,10 @@ public class AfkListener implements Listener {
         // check if the player has gone afk or is returning from afk
         if(!hasGoneAfk)
             return;
+
+        String afkServerName = AfkSender.getInstance().getConfig().getString("afk-server-name");
+        String playerMessage = ChatColor.translateAlternateColorCodes('&',AfkSender.getInstance().getConfig().getString("afk-server-send-message"));
+        String ignoreAfkMessage = ChatColor.translateAlternateColorCodes('&',AfkSender.getInstance().getConfig().getString("ignore-afk-message"));
 
         // define player
         Player player;

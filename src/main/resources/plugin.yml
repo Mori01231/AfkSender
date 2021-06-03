@@ -5,3 +5,23 @@ api-version: 1.15
 authors: [ Mori01231 ]
 description: Sends players to afk server when afk.
 website: https://github.com/Mori01231
+
+commands:
+  afksender:
+    description: Base command for AfkSender
+    aliases: [afks]
+    usage: Error. Use /afksender for more information.
+
+permissions:
+  afksender.*:
+    description: Allows access to all afksender permissions.
+    default: false
+    children:
+      afksender.reload: true
+      afksender.ignore: true
+  afksender.reload:
+    description: Allows you to use reload config files.
+    default: false
+  afksender.ignore:
+    description: Allows you to use ignore afk kick.
+    default: false
