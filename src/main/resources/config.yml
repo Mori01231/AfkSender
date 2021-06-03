@@ -1,0 +1,7 @@
+# config file for AfkSender
+
+afk-server-name: "server name"
+
+afk-server-send-message: "&3Sending you to &a%SERVERNAME% &3server because you went afk."
+
+ignore-afk-message: "&3Ignored afk kick."
