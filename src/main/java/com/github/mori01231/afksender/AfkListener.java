@@ -1,7 +1,6 @@
 package com.github.mori01231.afksender;
 
 import net.ess3.api.events.AfkStatusChangeEvent;
-import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
